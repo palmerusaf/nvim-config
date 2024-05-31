@@ -2,11 +2,8 @@ return {
   "nvim-telescope/telescope.nvim",
   opts = function()
     local actions = require "telescope.actions"
-    local get_icon = require("astronvim.utils").get_icon
     return {
       defaults = {
-        prompt_prefix = string.format("%s ", get_icon "Search"),
-        selection_caret = string.format("%s ", get_icon "Selected"),
         path_display = { "truncate" },
         sorting_strategy = "ascending",
         layout_config = {
