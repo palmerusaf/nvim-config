@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   -- { import = "astrocommunity.pack.cpp" },
   -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
   -- { import = "astrocommunity.pack.markdown" },
