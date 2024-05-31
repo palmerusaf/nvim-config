@@ -13,11 +13,11 @@ return {
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 500, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
-      autopairs = true,                                 -- enable autopairs at start
-      cmp = true,                                       -- enable completion at start
-      diagnostics_mode = 3,                             -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
-      highlighturl = true,                              -- highlight URLs at start
-      notifications = true,                             -- enable notifications at start
+      autopairs = true, -- enable autopairs at start
+      cmp = true, -- enable completion at start
+      diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+      highlighturl = true, -- highlight URLs at start
+      notifications = true, -- enable notifications at start
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
@@ -26,14 +26,14 @@ return {
     },
     -- vim options can be configured here
     options = {
-      opt = {                  -- vim.opt.<key>
+      opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
-        number = true,         -- sets vim.opt.number
-        spell = false,         -- sets vim.opt.spell
-        signcolumn = "yes",    -- sets vim.opt.signcolumn to yes
-        wrap = true,           -- sets vim.opt.wrap
+        number = true, -- sets vim.opt.number
+        spell = false, -- sets vim.opt.spell
+        signcolumn = "yes", -- sets vim.opt.signcolumn to yes
+        wrap = true, -- sets vim.opt.wrap
       },
-      g = {                    -- vim.g.<key>
+      g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
@@ -61,28 +61,44 @@ return {
         },
 
         --Session lowercase s remap
-        ["<leader>s"] = { name = "󱂬 Session" },
-        ["<leader>sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" },
-        ["<leader>ss"] = { "<cmd>SessionManager! save_current_session<cr>", desc = "Save this session" },
-        ["<leader>sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" },
-        ["<leader>sf"] = { "<cmd>SessionManager! load_session<cr>", desc = "Search sessions" },
-        ["<leader>s."] = {
-          "<cmd>SessionManager! load_current_dir_session<cr>",
-          desc = "Load current directory session",
+        ["<Leader>s"] = { name = "󱂬 Session" },
+        ["<Leader>sl"] = { function() require("resession").load "Last Session" end, desc = "Load last session" },
+        ["<Leader>ss"] = { function() require("resession").save() end, desc = "Save this session" },
+        ["<Leader>sS"] = {
+          function() require("resession").save(vim.fn.getcwd(), { dir = "dirsession" }) end,
+          desc = "Save this dirsession",
         },
-
+        ["<Leader>st"] = { function() require("resession").save_tab() end, desc = "Save this tab's session" },
+        ["<Leader>sd"] = { function() require("resession").delete() end, desc = "Delete a session" },
+        ["<Leader>sD"] = {
+          function() require("resession").delete(nil, { dir = "dirsession" }) end,
+          desc = "Delete a dirsession",
+        },
+        ["<Leader>sf"] = { function() require("resession").load() end, desc = "Load a session" },
+        ["<Leader>sF"] = {
+          function() require("resession").load(nil, { dir = "dirsession" }) end,
+          desc = "Load a dirsession",
+        },
+        ["<Leader>s."] = {
+          function() require("resession").load(vim.fn.getcwd(), { dir = "dirsession" }) end,
+          desc = "Load current dirsession",
+        },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
-        -- ["<leader>S"] = false,
-        -- ["<leader>Sl"] = false,
-        -- ["<leader>Ss"] = false,
-        -- ["<leader>Sd"] = false,
-        -- ["<leader>Sf"] = false,
-        -- ["<leader>S."] = false,
+        ["<Leader>S"] = false,
+        ["<Leader>Sl"] = false,
+        ["<Leader>Ss"] = false,
+        ["<Leader>SS"] = false,
+        ["<Leader>St"] = false,
+        ["<Leader>Sd"] = false,
+        ["<Leader>SD"] = false,
+        ["<Leader>Sf"] = false,
+        ["<Leader>SF"] = false,
+        ["<Leader>S."] = false,
       },
     },
   },
