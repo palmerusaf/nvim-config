@@ -23,6 +23,7 @@ return {
           i = {
             ["<C-n>"] = actions.cycle_history_next,
             ["<C-p>"] = actions.cycle_history_prev,
+            ["<C-CR>"] = actions.send_selected_to_qflist + actions.open_qflist,
             ["<C-j>"] = actions.move_selection_next,
             ["<C-k>"] = actions.move_selection_previous,
           },
