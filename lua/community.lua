@@ -18,7 +18,7 @@ return {
   -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
   -- { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.utility.noice-nvim" },
-  -- { import = "astrocommunity.editing-support.refactoring-nvim" },
+  { import = "astrocommunity.editing-support.refactoring-nvim" },
   -- { import = "astrocommunity.editing-support.treej" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
