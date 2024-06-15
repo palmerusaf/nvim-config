@@ -83,11 +83,6 @@ return {
     end,
   },
   {
-    "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    opts = {},
-  },
-  {
     "rcarriga/nvim-notify",
     opts = {
       background_colour = "NotifyBackground",
