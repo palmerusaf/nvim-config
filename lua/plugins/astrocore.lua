@@ -60,6 +60,11 @@ return {
           desc = "Close buffer from tabline",
         },
 
+        ["<Leader>f:"] = {
+          function() require("telescope.builtin").command_history() end,
+          desc = "Search cmd hist",
+        },
+
         --Session lowercase s remap
         ["<Leader>s"] = { name = "󱂬 Session" },
         ["<Leader>sl"] = { function() require("resession").load "Last Session" end, desc = "Load last session" },
