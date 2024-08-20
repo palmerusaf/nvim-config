@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
