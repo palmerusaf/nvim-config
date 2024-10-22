@@ -17,7 +17,7 @@ return {
         "bashls",
         "jsonls",
         "tailwindcss",
-        "tsserver",
+        "ts_ls",
         -- add more arguments for adding more language servers
       })
     end,
