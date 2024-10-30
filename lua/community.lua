@@ -12,7 +12,7 @@ return {
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
-  { import = "astrocommunity.media.presence-nvim" },
+  -- { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
