@@ -18,6 +18,8 @@ return {
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.syntax.hlargs-nvim" },
+  -- for leet cod open nvim with leetcode.nvim
+  { import = "astrocommunity.game.leetcode-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   -- import/override with your plugins folder
