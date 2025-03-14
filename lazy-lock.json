@@ -65,7 +65,7 @@
   "nvim-window-picker": { "branch": "main", "commit": "41cfaa428577c53552200a404ae9b3a0b5719706" },
   "oil.nvim": { "branch": "master", "commit": "b77ed915ab1e53720a6283702816cea2695a2638" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
-  "presence.nvim": { "branch": "main", "commit": "87c857a56b7703f976d3a5ef15967d80508df6e6" },
+  "presence.nvim": { "branch": "main", "commit": "f4b961bc73dd44b7244500de08dd962d10228978" },
   "promise-async": { "branch": "main", "commit": "38a4575da9497326badd3995e768b4ccf0bb153e" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "5c9660801ce345cd3835e1947c12b54290ab7e71" },
   "refactoring.nvim": { "branch": "master", "commit": "d2786877c91aa409c824f27b4ce8a9f560dda60a" },
