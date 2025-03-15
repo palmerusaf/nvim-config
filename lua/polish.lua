@@ -55,3 +55,12 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     }
   end,
 })
+
+-- neovide stuff
+if vim.g.neovide then
+  vim.g.neovide_padding_top = 0
+  vim.g.neovide_padding_bottom = 0
+  vim.g.neovide_padding_right = 0
+  vim.g.neovide_padding_left = 0
+  vim.o.guifont = "Source Code Pro:h12" -- text below applies for VimScript
+end
