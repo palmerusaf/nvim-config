@@ -15,6 +15,7 @@ return {
   -- { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.recipes.neovide" },
   { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
