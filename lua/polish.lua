@@ -58,6 +58,12 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 
 -- neovide stuff
 if vim.g.neovide then
+  vim.keymap.set(
+    { "n", "v", "s", "x", "o", "i", "l", "c", "t" },
+    "<C-S-v>",
+    function() vim.api.nvim_paste(vim.fn.getreg "+", true, -1) end,
+    { noremap = true, silent = true }
+  )
   vim.g.neovide_padding_top = 0
   vim.g.neovide_padding_bottom = 0
   vim.g.neovide_padding_right = 0
