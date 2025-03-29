@@ -24,6 +24,13 @@ return {
     opts = {
       dashboard = {
         preset = {
+          ---@type snacks.dashboard.Item[]
+          keys = {
+            { icon = " ", key = "f", desc = "Projects", action = ":lua Snacks.dashboard.pick('projects')" },
+            { icon = " ", key = "d", desc = "Dir", action = "<CMD>norm -<CR>" },
+            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+            { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+          },
           header = table.concat({
             "neovim",
           }, "\n"),
