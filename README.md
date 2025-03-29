@@ -1,4 +1,4 @@
-# AstroNvim Template
+# AstroNvim Config
 
 **NOTE:** This is for AstroNvim v5+
 

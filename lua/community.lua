@@ -8,7 +8,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.tailwindcss" },
+  -- { import = "astrocommunity.pack.tailwindcss" }, WARN: throws error
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
