@@ -28,7 +28,6 @@ return {
           keys = {
             { icon = " ", key = "f", desc = "Projects", action = ":lua Snacks.dashboard.pick('projects')" },
             { icon = " ", key = "d", desc = "Dir", action = "<CMD>norm -<CR>" },
-            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
           },
           header = table.concat({
             "neovim",
