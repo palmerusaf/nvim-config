@@ -104,7 +104,11 @@ return {
   -- edits the directory in buffer press '-' to activate
   {
     "stevearc/oil.nvim",
-    opts = {},
+    opts = {
+      win_options = {
+        winbar = "%!v:lua.get_oil_winbar()",
+      },
+    },
     keys = {
       { "-", "<cmd>Oil<cr>", mode = { "n" }, desc = "Open parent directory" },
     },
