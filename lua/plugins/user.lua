@@ -108,6 +108,18 @@ return {
       win_options = {
         winbar = "%!v:lua.get_oil_winbar()",
       },
+      keymaps = {
+        ["<CR>"] = function()
+          local oil = require "oil"
+          local entry = oil.get_cursor_entry()
+          if entry and entry.type == "directory" then
+            vim.cmd("cd " .. entry.name)
+            oil.select()
+          else
+            oil.select()
+          end
+        end,
+      },
     },
     keys = {
       { "-", "<cmd>Oil<cr>", mode = { "n" }, desc = "Open parent directory" },
