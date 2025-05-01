@@ -111,6 +111,21 @@ return {
     },
     keys = {
       { "-", "<cmd>Oil<cr>", mode = { "n" }, desc = "Open parent directory" },
+      {
+        "gc",
+        function()
+          local oil = require "oil"
+          local dir = oil.get_current_dir()
+          if dir then
+            vim.cmd("cd " .. dir)
+            print("Changed directory to: " .. dir)
+          else
+            print "Failed to get Oil directory"
+          end
+        end,
+        mode = { "n" },
+        desc = "Change to current Oil directory",
+      },
     },
   },
   {
