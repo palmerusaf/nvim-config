@@ -4,22 +4,8 @@
 -- This is just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
--- Set up custom filetypes
--- vim.filetype.add {
---   extension = {
---     foo = "fooscript",
---   },
---   filename = {
---     ["Foofile"] = "fooscript",
---   },
---   pattern = {
---     ["~/%.config/foo/.*"] = "fooscript",
---   },
--- }
-
 -- this will set the file time to latex when your are in a md file and between $$ signs
 -- this is so you get latex auto completion for math symbols
-
 vim.api.nvim_create_autocmd("InsertEnter", {
   pattern = "*.md",
   callback = function()
