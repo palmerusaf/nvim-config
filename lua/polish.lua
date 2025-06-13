@@ -82,3 +82,9 @@ function _G.get_oil_winbar()
     return vim.api.nvim_buf_get_name(0)
   end
 end
+
+-- disable spell check in terminal
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  callback = function() vim.opt_local.spell = false end,
+})
