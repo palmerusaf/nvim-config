@@ -74,3 +74,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
   callback = function() vim.opt_local.spell = false end,
 })
+
+-- have debug refactor appear below var
+vim.keymap.set("n", "<leader>rd", function() require("refactoring").debug.print_var { below = true } end)
