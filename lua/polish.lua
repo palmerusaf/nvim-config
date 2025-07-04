@@ -77,3 +77,19 @@ vim.api.nvim_create_autocmd("TermOpen", {
 
 -- have debug refactor appear below var
 vim.keymap.set("n", "<leader>rd", function() require("refactoring").debug.print_var { below = true } end)
+
+-- speed up copy paste on wayland
+if vim.fn.has "unix" == 1 and vim.env.WAYLAND_DISPLAY then
+  vim.g.clipboard = {
+    name = "cliphist",
+    copy = {
+      ["+"] = "wl-copy",
+      ["*"] = "wl-copy",
+    },
+    paste = {
+      ["+"] = "cliphist list | head -n 1",
+      ["*"] = "cliphist list | head -n 1",
+    },
+    cache_enabled = 1,
+  }
+end
