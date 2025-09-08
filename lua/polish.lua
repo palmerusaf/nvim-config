@@ -77,3 +77,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 
 -- have debug refactor appear below var
 vim.keymap.set("n", "<leader>rd", function() require("refactoring").debug.print_var { below = true } end)
+
+-- disable swap because its fucking annoying, hopefully i won't regret this
+vim.opt.swapfile = false
