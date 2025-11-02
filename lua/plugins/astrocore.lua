@@ -40,8 +40,9 @@ return {
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
-        relativenumber = true, -- sets vim.opt.relativenumber
-        number = true, -- sets vim.opt.number
+        relativenumber = false, -- sets vim.opt.relativenumber
+        number = false, -- sets vim.opt.number
+        foldcolumn = "0",
         spell = true, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
