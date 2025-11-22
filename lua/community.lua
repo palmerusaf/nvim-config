@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.pack.tailwindcss" }, WARN: throws error
   { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.quickfix.quicker-nvim" },
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   -- { import = "astrocommunity.media.presence-nvim" },
