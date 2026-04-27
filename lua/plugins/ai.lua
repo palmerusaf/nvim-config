@@ -10,7 +10,7 @@ return {
         },
 
         default_provider = "ollama",
-        default_model = "qwen3-coder-next", -- change if needed
+        model = "qwen2.5-coder:7b",
 
         -- optional but useful
         chat_dir = vim.fn.stdpath "data" .. "/gp_chats",

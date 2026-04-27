@@ -6,7 +6,7 @@ return {
         provider = "ollama",
         provider_options = {
           endpoint = "http://localhost:11434",
-          model = "qwen3-coder-next",
+          model = "qwen2.5-coder:7b",
         },
 
         -- THIS enables inline ghost text
