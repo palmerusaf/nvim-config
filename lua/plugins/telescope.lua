@@ -4,6 +4,12 @@ return {
     local actions = require "telescope.actions"
     return {
       defaults = {
+        file_ignore_patterns = {
+          "%.svg",
+          "node_modules",
+          "dist",
+          "build",
+        },
         path_display = { "truncate" },
         sorting_strategy = "ascending",
         layout_config = {
