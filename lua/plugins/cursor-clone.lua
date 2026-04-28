@@ -11,12 +11,12 @@ return {
       provider = "tavily", -- tavily, serpapi, google, kagi, brave, or searxng
       proxy = nil, -- proxy support, e.g., http://127.0.0.1:7890
     },
-    input = {
-      provider = "snacks",
-    },
-    selector = {
-      provider = "snacks",
-    },
+    -- input = {
+    --   provider = "telescope",
+    -- },
+    -- selector = {
+    --   provider = "telescope",
+    -- },
     tools = {
       glob = false,
     },
