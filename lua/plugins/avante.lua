@@ -26,10 +26,7 @@ return {
         ["local"] = true,
         __inherited_from = "openai",
         endpoint = "http://127.0.0.1:11434/v1",
-        model = "qwen3.5:9b",
-        -- model = "qwen3.5:14b",
-        -- model = "qwen2.5-coder:14b", --doesn't work with tools
-        -- model = "VladimirGav/Qwen3.6-27B-16GB-VRAM-Uncensored:latest",
+        model = "gemma4:12b",
         temperature = 0,
         disable_tools = false,
         max_tokens = 8192,
